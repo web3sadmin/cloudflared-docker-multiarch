@@ -23,9 +23,6 @@ FROM debian:10
 # copy our compiled binary
 COPY --from=builder --chown=nonroot /go/src/github.com/cloudflare/cloudflared/cloudflared /usr/local/bin/
 
-# run as non-privileged user
-USER nonroot
-
 # command / entrypoint of container
 ENTRYPOINT ["cloudflared", "--no-autoupdate"]
 CMD ["version"]
