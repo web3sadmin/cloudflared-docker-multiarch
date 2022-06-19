@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: maggie0002/cloudflared
+  IMAGE_NAME: SayakMukhopadhyay/cloudflared
 
 jobs:
   build-and-push-image:
