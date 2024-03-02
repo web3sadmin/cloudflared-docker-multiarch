@@ -18,7 +18,10 @@ COPY . .
 RUN make cloudflared
 
 # use debian as the base image
-FROM debian:10
+#FROM debian:10
+#FROM armhf/alpine:latest
+#FROM arm32v7/alpine:latest
+FROM armhf/alpine:3.14
 
 # copy our compiled binary
 COPY --from=builder --chown=nonroot /go/src/github.com/cloudflare/cloudflared/cloudflared /usr/local/bin/
